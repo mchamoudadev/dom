@@ -1,0 +1,30 @@
+[
+	{
+		"firstName": "Mc",
+		"lastName": "Hamouda",
+		"phone": 565656,
+		"subjects": [
+			{
+				"maths": {
+					"marks": [1, 2, 3, 4, 5]
+				}
+			},
+			"english",
+			"science"
+		]
+	},
+	{
+		"firstName": "Najma",
+		"lastName": "Abdi",
+		"phone": 23,
+		"subjects": [
+			{
+				"maths": {
+					"marks": [1, 2, 3, 4, 5]
+				}
+			},
+			"english",
+			"science"
+		]
+	}
+]
