@@ -95,10 +95,25 @@ document.addEventListener('click', function (e) {
     }
 });
 
+function removeFromLocalStorage(title) {
+
+    const currentNotes = getDataFromLocalStorage();
+    console.log(currentNotes);
+    const remainNotes = currentNotes.filter(function (note) {
+        return note !== title;
+    });
+    localStorage.setItem('notes', JSON.stringify(remainNotes));
+
+}
 
 
 notes.addEventListener('click', function (event) {
     if (event.target.classList.contains('delete')) {
+        // remove from local storage
+
+        const deletingTitle = event.target.parentElement.querySelector("li").textContent;
+
+        removeFromLocalStorage(deletingTitle);
         event.target.parentElement.remove();
     } else if (event.target.classList.contains('complete')) {
         event.target.parentElement.querySelector("li").style.textDecoration = 'line-through';
